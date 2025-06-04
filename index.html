@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Extract beautiful color palettes from images and generate professional theme combinations for your design projects. Free online color palette generator and extractor tool.">
+    <meta name="keywords" content="color palette, color extractor, design tools, color generator, hex colors, rgb colors, color scheme, design palette, image colors, color picker">
+    <meta name="author" content="Ujjawal Singh">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta property="og:site_name" content="Hue Engine">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <title>Hue Engine</title>
+    <link rel="stylesheet" href="./des/style.css" type="text/css">
+    <link rel="icon" type="image/x-icon" href="icon/image.png">
+
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hue Engine</h1>
+        <div class="upload-section">
+            <div class="upload-box" id="uploadBox">
+                <div class="upload-icon">📸</div>
+                <div class="upload-text">Drop your image here or click to browse</div>
+                <button class="btn" onclick="document.getElementById('fileInput').click()">Choose Image</button>
+                <input type="file" id="fileInput" class="file-input" accept="image/*,.png,.jpg,.jpeg,.gif,.bmp,.webp,.svg,.tiff,.ico">
+            </div>
+        </div>
+
+        <div id="results" style="display: none;">
+            <div class="palette-section">
+                <h2 class="section-title">Extracted Dominant Colors</h2>
+                <div id="dominantPalette"></div>
+            </div>
+
+            <div class="palette-section">
+                <h2 class="section-title">Generated Theme Palettes</h2>
+                <div class="palette-grid" id="themePalettes"></div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <div>Extracting colors...</div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="./script/index.js"></script>
+</body>
+</html>
